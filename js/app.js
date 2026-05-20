@@ -289,16 +289,6 @@
   }
 
   async function getChatReply(message) {
-    try {
-      const data = await SH.apiFetch('/chat', {
-        method: 'POST',
-        body: JSON.stringify({ message }),
-      });
-      return data.reply;
-    } catch (error) {
-      return `${localChatReply(message)} Server note: ${error.message}`;
-    }
-
     function localChatReply(messageText) {
       const text = messageText.toLowerCase();
       if (text.includes('hospital') || text.includes('doctor')) return 'Open Hospital Finder to compare hospitals, doctors, fees, and available slots.';
@@ -307,6 +297,16 @@
       if (text.includes('reminder') || text.includes('prescription')) return 'Upload prescriptions in Health Records, then generate medicine reminders from extracted details.';
       if (text.includes('payment')) return 'Appointments can create test-mode payment orders or sandbox receipts when payment keys are not configured.';
       return 'I can guide you to hospitals, appointments, reminders, records, medicines, payments, video consults, or emergency support.';
+    }
+
+    try {
+      const data = await SH.apiFetch('/chat', {
+        method: 'POST',
+        body: JSON.stringify({ message }),
+      });
+      return data.reply;
+    } catch (error) {
+      return `${localChatReply(message)} Server note: ${error.message}`;
     }
   }
 
