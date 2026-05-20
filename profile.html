@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile | Medix</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="profile">
+  <div class="app-shell">
+    <aside class="sidebar" data-sidebar></aside>
+    <div class="app-main">
+      <div class="app-main-inner">
+        <header class="topbar" data-topbar></header>
+
+        <main class="stack">
+          <section class="profile-grid">
+            <article class="form-card">
+              <div class="section-head">
+                <div>
+                  <h2>Edit Profile</h2>
+                  <p class="muted">Update contact and emergency information</p>
+                </div>
+              </div>
+              <form id="profileForm" class="stack">
+                <div class="form-row two">
+                  <div class="field"><label for="name">Full name</label><input id="name" name="name" class="input" required /></div>
+                  <div class="field"><label for="age">Age</label><input id="age" name="age" class="input" required /></div>
+                </div>
+                <div class="form-row two">
+                  <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" class="input" required /></div>
+                  <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" class="input" required /></div>
+                </div>
+                <div class="form-row two">
+                  <div class="field"><label for="city">City</label><input id="city" name="city" class="input" required /></div>
+                  <div class="field"><label for="bloodGroup">Blood group</label><input id="bloodGroup" name="bloodGroup" class="input" required /></div>
+                </div>
+                <div class="field"><label for="emergencyContact">Emergency contact</label><input id="emergencyContact" name="emergencyContact" class="input" required /></div>
+                <button class="btn btn-primary" type="submit">Save Profile</button>
+              </form>
+            </article>
+
+            <article class="panel">
+              <div class="section-head">
+                <div>
+                  <h2>Profile Tips</h2>
+                  <p class="muted">Keep the profile current for smoother emergency and booking workflows</p>
+                </div>
+              </div>
+              <div class="list">
+                <article class="card"><h3>Use a reachable phone number</h3><p class="helper" style="margin-top:10px;">Hospitals often need a quick callback after bookings or schedule changes.</p></article>
+                <article class="card"><h3>Maintain emergency contact info</h3><p class="helper" style="margin-top:10px;">This supports urgent situations and faster handoffs if someone else is helping you.</p></article>
+                <article class="card"><h3>Update your city</h3><p class="helper" style="margin-top:10px;">The finder and appointment experience make more sense when your primary city is accurate.</p></article>
+              </div>
+            </article>
+          </section>
+
+          <section class="subgrid-two">
+            <article class="panel">
+              <h2>Why this matters</h2>
+              <p class="helper" style="margin-top:10px;">A strong profile is not just administrative. It improves booking accuracy, supports emergencies, and keeps the app centered around your real care context.</p>
+            </article>
+            <article class="panel">
+              <h2>What to review monthly</h2>
+              <p class="helper" style="margin-top:10px;">Check your primary phone number, emergency contact, home city, and any details that may affect urgent communication.</p>
+            </article>
+          </section>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/profile.js"></script>
+  <script>
+    window.SmartHealth.initializeProfilePage();
+  </script>
+</body>
+</html>

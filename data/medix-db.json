@@ -1,0 +1,124 @@
+{
+  "users": [
+    {
+      "id": "user-demo",
+      "name": "Aarav Mehta",
+      "email": "aarav.mehta@example.com",
+      "passwordHash": "6b53caf83743678c0ed2b00a9fb9d064ddb18e56bcd75a7c65aae8a80ba1ac2d",
+      "role": "Patient",
+      "createdAt": "2026-05-18T13:11:28.461Z"
+    }
+  ],
+  "sessions": {
+    "cf8826f1a1f32c8778974782b48f73546666e2ce1c3d0a9d7b16172a9176c5ac": {
+      "userId": "user-demo",
+      "createdAt": "2026-05-18T13:11:40.982Z"
+    },
+    "c47a0b849c856ce780eb60bc51532e5fad037458aaaf2aa8f894b2e21630091c": {
+      "userId": "user-demo",
+      "createdAt": "2026-05-18T13:13:21.562Z"
+    },
+    "fd25563b73a38302463827c58122629cceb3083910549f05bd19f90171405b9e": {
+      "userId": "user-demo",
+      "createdAt": "2026-05-18T13:13:49.651Z"
+    }
+  },
+  "prescriptions": [
+    {
+      "id": "rx-443260315e",
+      "filename": "manual-prescription-text",
+      "provider": "local",
+      "title": "Uploaded prescription",
+      "doctor": "Doctor not detected",
+      "date": "2026-05-18",
+      "medicines": "Azithromycin 500mg after lunch; Pantoprazole 40mg morning",
+      "notes": "Local fallback extraction. Configure OPENAI_API_KEY for image-based extraction.",
+      "createdAt": "2026-05-18T13:14:25.961Z"
+    },
+    {
+      "id": "rx-2b2c1935dc",
+      "filename": "manual.txt",
+      "provider": "local",
+      "title": "Uploaded prescription",
+      "doctor": "Doctor not detected",
+      "date": "2026-05-18",
+      "medicines": "Metformin 500mg after dinner; Vitamin D3 morning",
+      "notes": "Local fallback extraction. Configure OPENAI_API_KEY for image-based extraction.",
+      "createdAt": "2026-05-18T13:11:54.956Z"
+    }
+  ],
+  "reminders": [
+    {
+      "id": "reminder-5e58d095f9",
+      "appointmentId": "appt-test",
+      "doctorName": "Dr. Test",
+      "patientName": "Aarav",
+      "email": "a@example.com",
+      "phone": "+911234567890",
+      "message": "Reminder: your Medix appointment with Dr. Test is scheduled soon.",
+      "channels": {
+        "sms": true,
+        "email": true
+      },
+      "delivery": [
+        {
+          "channel": "sms",
+          "ok": true,
+          "provider": "sandbox",
+          "detail": "Twilio not configured; SMS simulated."
+        },
+        {
+          "channel": "email",
+          "ok": true,
+          "provider": "sandbox",
+          "detail": "SMTP not configured; email simulated."
+        }
+      ],
+      "createdAt": "2026-05-18T13:11:55.067Z"
+    }
+  ],
+  "payments": [
+    {
+      "id": "pay-9bf60a6f3e",
+      "orderId": "order-b8b86cba99",
+      "appointmentId": "",
+      "doctorName": "Dr. Test",
+      "amount": 500,
+      "currency": "INR",
+      "provider": "sandbox",
+      "status": "Paid",
+      "createdAt": "2026-05-18T13:11:54.958Z",
+      "receiptId": "receipt-a647b6367a",
+      "verifiedAt": "2026-05-18T13:11:55.006Z"
+    }
+  ],
+  "ambulanceRequests": [
+    {
+      "id": "amb-d5952614b6",
+      "patientName": "Aarav",
+      "pickup": "Sector 18 Delhi",
+      "condition": "Chest pain",
+      "city": "Delhi",
+      "status": "Dispatch request recorded",
+      "eta": "8 min",
+      "mapUrl": "https://www.google.com/maps/search/emergency+hospitals+near+Sector%2018%20Delhi",
+      "createdAt": "2026-05-18T13:11:55.078Z"
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg-fc167354f9",
+      "message": "Emergency help",
+      "reply": "For urgent symptoms, contact emergency services immediately. In Medix, open Emergency to request ambulance support and map nearby hospitals.",
+      "provider": "local",
+      "createdAt": "2026-05-18T13:14:03.689Z"
+    },
+    {
+      "id": "msg-a646b64e3e",
+      "message": "how do I book ambulance",
+      "reply": "For urgent symptoms, contact emergency services immediately. In Medix, open Emergency to request ambulance support and map nearby hospitals.",
+      "provider": "local",
+      "createdAt": "2026-05-18T13:11:40.990Z"
+    }
+  ]
+}

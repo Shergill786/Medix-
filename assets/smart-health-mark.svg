@@ -1,0 +1,14 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="crestGold" x1="33" y1="23" x2="95" y2="97" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F7E7C5"/>
+      <stop offset="1" stop-color="#D9B06C"/>
+    </linearGradient>
+  </defs>
+  <path d="M39 30C47.5147 23.7978 55.9264 20.6967 64.2352 20.6967C72.5441 20.6967 80.799 23.7978 89 30" stroke="url(#crestGold)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M40 93C47.8914 100.099 55.9798 103.649 64.2653 103.649C72.5508 103.649 80.4624 100.099 88 93" stroke="url(#crestGold)" stroke-width="4.5" stroke-linecap="round" stroke-opacity="0.9"/>
+  <path d="M64 34V84" stroke="white" stroke-width="8" stroke-linecap="round"/>
+  <path d="M39 59H89" stroke="white" stroke-width="8" stroke-linecap="round"/>
+  <path d="M76 42C83.4111 44.0945 89.0415 48.4087 92.8912 54.9427C96.7408 61.4766 97.2883 68.3912 94.5337 75.6864C91.7791 82.9816 86.9181 88.4472 79.9505 92.0832C72.9829 95.7191 65.8741 96.301 58.6242 93.8289" stroke="url(#crestGold)" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M52 38C44.6614 40.4557 39.1248 44.8544 35.3901 51.1961C31.6553 57.5377 31.1604 64.2577 33.9054 71.356C36.6503 78.4543 41.3673 83.8254 48.0563 87.4693" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-opacity="0.88"/>
+</svg>

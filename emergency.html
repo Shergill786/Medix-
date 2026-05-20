@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emergency | Medix</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="emergency">
+  <div class="app-shell">
+    <aside class="sidebar" data-sidebar></aside>
+    <div class="app-main">
+      <div class="app-main-inner">
+        <header class="topbar" data-topbar></header>
+
+        
+          <section class="panel">
+            <div class="section-head">
+              <div>
+                <h2>Emergency Contacts</h2>
+                <p class="muted">Quick access numbers for urgent situations</p>
+              </div>
+            </div>
+            <div id="emergencyContacts" class="contacts-grid"></div>
+          </section>
+
+          <section class="content-grid">
+            <article class="panel">
+              <div class="section-head">
+                <div>
+                  <h2>Nearest Hospital Map</h2>
+                  <p class="muted">Demo map links based on your saved city</p>
+                </div>
+              </div>
+              <div id="emergencyMap" class="map-preview"></div>
+            </article>
+
+            <article class="form-card">
+              <div class="section-head">
+                <div>
+                  <h2>Ambulance Booking Demo</h2>
+                  <p class="muted">Create a local emergency request status</p>
+                </div>
+              </div>
+              <form id="ambulanceForm" class="stack">
+                <div class="field"><label for="patientName">Patient name</label><input id="patientName" name="patientName" class="input" required /></div>
+                <div class="field"><label for="pickup">Pickup location</label><input id="pickup" name="pickup" class="input" required /></div>
+                <div class="field"><label for="condition">Condition</label><textarea id="condition" name="condition" class="textarea" required></textarea></div>
+                <button class="btn btn-danger" type="submit">Request Ambulance</button>
+              </form>
+            </article>
+          </section>
+
+          <section class="panel">
+            <div class="section-head">
+              <div>
+                <h2>Ambulance Request Status</h2>
+                <p class="muted">Mock dispatches saved locally</p>
+              </div>
+            </div>
+            <div id="ambulanceRequests" class="list"></div>
+          </section>
+
+          <section class="panel">
+            <div class="section-head">
+              <div>
+                <h2>Emergency Checklist</h2>
+                <p class="muted">Keep these basics ready for high-pressure moments</p>
+              </div>
+            </div>
+            <div class="card-grid two">
+              <article class="card"><h3>Carry IDs</h3><p class="helper" style="margin-top:10px;">Keep your ID, blood group, and emergency contact information ready.</p></article>
+              <article class="card"><h3>Know allergies</h3><p class="helper" style="margin-top:10px;">Maintain an updated list of allergies and current medications.</p></article>
+              <article class="card"><h3>Nearest hospital</h3><p class="helper" style="margin-top:10px;">Use the hospital finder to identify the best nearby facility ahead of time.</p></article>
+              <article class="card"><h3>Stay reachable</h3><p class="helper" style="margin-top:10px;">Share your location and contact details with one trusted person when needed.</p></article>
+            </div>
+          </section>
+
+          <section class="subgrid-three">
+            <article class="panel">
+              <h2>Chest pain or collapse</h2>
+              <p class="helper" style="margin-top:10px;">Treat sudden chest pain, fainting, collapse, or severe breathing trouble as urgent and seek help immediately.</p>
+            </article>
+            <article class="panel">
+              <h2>Severe bleeding or injury</h2>
+              <p class="helper" style="margin-top:10px;">Uncontrolled bleeding, major trauma, or confusion after an accident should be escalated without delay.</p>
+            </article>
+            <article class="panel">
+              <h2>High fever with weakness</h2>
+              <p class="helper" style="margin-top:10px;">If fever is paired with faintness, breathing trouble, or poor responsiveness, move to urgent care quickly.</p>
+            </article>
+          </section>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/emergency.js"></script>
+  <script>
+    window.SmartHealth.initializeEmergencyPage();
+  </script>
+</body>
+</html>

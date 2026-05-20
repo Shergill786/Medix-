@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings | Medix</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/settings.css" />
+</head>
+<body data-page="settings">
+  <div class="app-shell">
+    <aside class="sidebar" data-sidebar></aside>
+    <div class="app-main">
+      <div class="app-main-inner">
+        <header class="topbar" data-topbar></header>
+
+        <main class="stack settings-container">
+          <!-- Settings Navigation Tabs -->
+          <nav class="settings-tabs">
+            <button class="settings-tab-btn active" data-tab="account">
+              <span class="tab-icon">👤</span>
+              <span class="tab-label">Account</span>
+            </button>
+            <button class="settings-tab-btn" data-tab="appearance">
+              <span class="tab-icon">🎨</span>
+              <span class="tab-label">Appearance</span>
+            </button>
+            <button class="settings-tab-btn" data-tab="notifications">
+              <span class="tab-icon">🔔</span>
+              <span class="tab-label">Notifications</span>
+            </button>
+            <button class="settings-tab-btn" data-tab="backup">
+              <span class="tab-icon">💾</span>
+              <span class="tab-label">Backup</span>
+            </button>
+            <button class="settings-tab-btn" data-tab="linked">
+              <span class="tab-icon">🔗</span>
+              <span class="tab-label">Linked</span>
+            </button>
+            <button class="settings-tab-btn" data-tab="support">
+              <span class="tab-icon">❓</span>
+              <span class="tab-label">Support</span>
+            </button>
+          </nav>
+
+          <!-- Settings Content Sections -->
+          <div class="settings-content">
+            <!-- Account Section -->
+            <section class="settings-section active" data-section="account">
+              <div class="section-header">
+                <h2>Account Settings</h2>
+                <p class="muted">Manage your account, security, and privacy</p>
+              </div>
+              <div class="settings-panel">
+                <div class="settings-list">
+                  <!-- Basic Account Settings -->
+                  <div class="settings-category">
+                    <h3 class="category-title">Basic Account</h3>
+                  </div>
+                  <div class="setting-item">
+                    <div class="setting-info">
+                      <strong>Email Address</strong>
+                      <p class="muted" id="settingsEmail">email@example.com</p>
+                    </div>
+                    <button class="btn btn-secondary" data-action="change-email">Change</button>
+                  </div>
+                  <div class="setting-item">
+                    <div class="setting-info">
+                      <strong>Password</strong>
+                      <p class="muted">Last changed 3 months ago</p>
+                    </div>
+                    <button class="btn btn-secondary" data-action="change-password">Change</button>
+                  </div>
+
+                  <!-- Security Settings -->
+                  <div class="settings-category">
+                    <h3 class="category-title">Security</h3>
+                  </div>
+                  <div class="setting-item">
+                    <div class="setting-info">
+                      <strong>Two-Factor Authentication</strong>
+                      <p class="muted">Add extra security with 2FA</p>
+                    </div>
+                    <button class="btn btn-secondary" data-action="setup-2fa">Setup</button>
+                  </div>
+                  <div class="setting-item">
+                    <div class="setting-info">
+                      <strong>Active Sessions</strong>
+                      <p class="muted">Manage your login sessions</p>
+                    </div>
+                    <button class="btn btn-secondary" data-action="view-sessions">View</button>
+                  </div>
+                  <div class="setting-item">
+                    <div class="setting-info">
+                      <strong>Login History</strong>
+                      <p class="muted">Track your account access</p>
+                    </div>
+                    <button class="btn btn-secondary" data-action="view-history">View</button>
+                  </div>
+
+                  <!-- Privacy & Data Settings -->
+                  <div class="settings-category">
+                    <h3 class="category-title">Privacy & Data</h3>
+                  </div>
+                  <div class="setting-item">
+                    <div class="setting-info">
+                      <strong>Profile Visibility</strong>
+                      <p class="muted">Control who can see your profile</p>
+                    </div>
+                    <select id="profileVisibility" class="input" style="width: 150px;">
+                      <option value="private">Private</option>
+                      <option value="public">Public</option>
+                      <option value="friends">Contacts Only</option>
+                    </select>
+                  </div>
+                  <div class="setting-item">
+                    <div class="setting-info">
+                      <strong>Data Collection</strong>
+                      <p class="muted">Help improve Medix with usage analytics</p>
+                    </div>
+                    <label class="toggle-switch">
+                      <input type="checkbox" id="dataCollection" checked />
+                      <span class="toggle-slider"></span>
+                    </label>
+                  </div>
+
+                  <!-- Danger Zone -->
+                  <div class="settings-category danger">
+                    <h3 class="category-title">Danger Zone</h3>
+                  </div>
+                  <div class="setting-item">
+                    <div class="setting-info">
+                      <strong>Clear Cache</strong>
+                      <p class="muted">Remove all cached data and temporary files</p>
+                    </div>
+                    <button class="btn btn-warning" data-action="clear-cache">Clear</button>
+                  </div>
+                  <div class="setting-item">
+                    <div class="setting-info">
+                      <strong>Logout</strong>
+                      <p class="muted">End your current session</p>
+                    </div>
+                    <button class="btn btn-danger" id="logoutBtn" data-action="logout">Logout</button>
+                  </div>
+                  <div class="setting-item">
+                    <div class="setting-info">
+                      <strong>Delete Account</strong>
+                      <p class="muted">Permanently delete your account and all data</p>
+                    </div>
+                    <button class="btn btn-danger" data-action="delete-account">Delete</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Appearance Section -->
+            <section class="settings-section" data-section="appearance">
+              <div class="section-header">
+                <h2>Appearance Settings</h2>
+                <p class="muted">Customize how Medix looks to you</p>
+              </div>
+              <div class="settings-panel">
+                <div class="settings-list">
+                  <div class="setting-item">
+                    <div class="setting-info">
+                      <strong>Theme Mode</strong>
+                      <p class="muted" id="themeStatus">Light mode</p>
+                    </div>
+                    <button class="btn btn-secondary" id="themeToggleBtn" data-action="toggle-theme">Toggle Theme</button>
+                  </div>
+                  <div class="setting-item">
+                    <div class="setting-info">
+                      <strong>Default Font Size</strong>
+                      <p class="muted">Adjust text size throughout the app</p>
+                    </div>
+                    <select class="input" style="width: 150px;">
+                      <option value="small">Small</option>
+                      <option value="normal" selected>Normal</option>
+                      <option value="large">Large</option>
+                    </select>
+                  </div>
+                  <div class="setting-item">
+                    <div class="setting-info">
+                      <strong>Language</strong>
+                      <p class="muted">Select your preferred language</p>
+                    </div>
+                    <select class="input" style="width: 150px;">
+                      <option value="en" selected>English</option>
+                      <option value="es">Español</option>
+                      <option value="fr">Français</option>
+                      <option value="hi">हिंदी</option>
+                    </select>
+                  </div>
+                  <div class="setting-item">
+                    <div class="setting-info">
+                      <strong>Timezone</strong>
+                      <p class="muted">Set your timezone for appointments</p>
+                    </div>
+                    <select class="input" style="width: 150px;">
+                      <option value="utc" selected>UTC</option>
+                      <option value="ist">IST (India)</option>
+                      <option value="est">EST</option>
+                      <option value="pst">PST</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Notifications Section -->
+            <section class="settings-section" data-section="notifications">
+              <div class="section-header">
+                <h2>Notification Preferences</h2>
+                <p class="muted">Control how you receive updates and alerts</p>
+              </div>
+              <div class="settings-panel">
+                <div class="settings-list">
+                  <div class="setting-item">
+                    <div class="setting-info">
+                      <strong>Appointment Reminders</strong>
+                      <p class="muted">Get notified before appointments</p>
+                    </div>
+                    <label class="toggle-switch">
+                      <input type="checkbox" id="appointmentReminders" checked />
+                      <span class="toggle-slider"></span>
+                    </label>
+                  </div>
+                  <div class="setting-item">
+                    <div class="setting-info">
+                      <strong>Medicine Reminders</strong>
+                      <p class="muted">Get notified for medicine schedules</p>
+                    </div>
+                    <label class="toggle-switch">
+                      <input type="checkbox" id="medicineReminders" checked />
+                      <span class="toggle-slider"></span>
+                    </label>
+                  </div>
+                  <div class="setting-item">
+                    <div class="setting-info">
+                      <strong>Emergency Alerts</strong>
+                      <p class="muted">Critical updates and emergency notifications</p>
+                    </div>
+                    <label class="toggle-switch">
+                      <input type="checkbox" id="emergencyAlerts" checked />
+                      <span class="toggle-slider"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+
+            <!-- Backup Section -->
+            <section class="settings-section" data-section="backup">
+              <div class="section-header">
+                <h2>Data Backup & Export</h2>
+                <p class="muted">Backup and export your medical data</p>
+              </div>
+              <div class="settings-panel">
+                <div class="settings-list">
+                  <div class="setting-item">
+                    <div class="setting-info">
+                      <strong>Export Medical Records</strong>
+                      <p class="muted">Download all your health records as PDF</p>
+                    </div>
+                    <button class="btn btn-secondary" data-action="export-records">Export</button>
+                  </div>
+                  <div class="setting-item">
+                    <div class="setting-info">
+                      <strong>Auto-Backup</strong>
+                      <p class="muted">Automatically backup your data daily</p>
+                    </div>
+                    <label class="toggle-switch">
+                      <input type="checkbox" id="autoBackup" checked />
+                      <span class="toggle-slider"></span>
+                    </label>
+                  </div>
+                  <div class="setting-item">
+                    <div class="setting-info">
+                      <strong>Last Backup</strong>
+                      <p class="muted" id="lastBackupTime">Today at 2:30 PM</p>
+                    </div>
+                    <button class="btn btn-secondary" data-action="backup-now">Backup Now</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Linked Accounts Section -->
+            <section class="settings-section" data-section="linked">
+              <div class="section-header">
+                <h2>Linked Accounts</h2>
+                <p class="muted">Connect your social accounts and services</p>
+              </div>
+              <div class="settings-panel">
+                <div class="settings-list">
+                  <div class="setting-item">
+                    <div class="setting-info">
+                      <strong>Google Account</strong>
+                      <p class="muted">Not connected</p>
+                    </div>
+                    <button class="btn btn-secondary" data-action="link-google">Connect</button>
+                  </div>
+                  <div class="setting-item">
+                    <div class="setting-info">
+                      <strong>Apple Account</strong>
+                      <p class="muted">Not connected</p>
+                    </div>
+                    <button class="btn btn-secondary" data-action="link-apple">Connect</button>
+                  </div>
+                  <div class="setting-item">
+                    <div class="setting-info">
+                      <strong>Health Tracking App</strong>
+                      <p class="muted">Sync your fitness data</p>
+                    </div>
+                    <button class="btn btn-secondary" data-action="link-health">Connect</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Support Section -->
+            <section class="settings-section" data-section="support">
+              <div class="section-header">
+                <h2>Help & Support</h2>
+                <p class="muted">Get help and find answers to common questions</p>
+              </div>
+              <div class="settings-panel">
+                <div class="settings-list">
+                  <div class="setting-item">
+                    <div class="setting-info">
+                      <strong>Contact Support</strong>
+                      <p class="muted">Chat with our support team</p>
+                    </div>
+                    <button class="btn btn-secondary" data-action="contact-support">Chat</button>
+                  </div>
+                  <div class="setting-item">
+                    <div class="setting-info">
+                      <strong>FAQs</strong>
+                      <p class="muted">Browse frequently asked questions</p>
+                    </div>
+                    <button class="btn btn-secondary" data-action="view-faqs">Browse</button>
+                  </div>
+                  <div class="setting-item">
+                    <div class="setting-info">
+                      <strong>Report a Bug</strong>
+                      <p class="muted">Help us improve Medix</p>
+                    </div>
+                    <button class="btn btn-secondary" data-action="report-bug">Report</button>
+                  </div>
+                  <div class="setting-item">
+                    <div class="setting-info">
+                      <strong>Feedback</strong>
+                      <p class="muted">Share your thoughts and suggestions</p>
+                    </div>
+                    <button class="btn btn-secondary" data-action="send-feedback">Share</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Overlays -->
+  <div class="modal-overlay" id="emailModal" data-modal="email">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Change Email Address</h3>
+        <button class="modal-close" data-close-modal>&times;</button>
+      </div>
+      <div class="modal-body">
+        <label>New Email Address</label>
+        <input type="email" id="newEmailInput" placeholder="Enter new email" class="modal-input">
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-modal-action="cancel">Cancel</button>
+        <button class="btn btn-primary" data-modal-action="confirm">Change Email</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="passwordModal" data-modal="password">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Change Password</h3>
+        <button class="modal-close" data-close-modal>&times;</button>
+      </div>
+      <div class="modal-body">
+        <label>Current Password</label>
+        <input type="password" id="currentPasswordInput" placeholder="Enter current password" class="modal-input">
+        <label>New Password</label>
+        <input type="password" id="newPasswordInput" placeholder="Enter new password" class="modal-input">
+        <label>Confirm Password</label>
+        <input type="password" id="confirmPasswordInput" placeholder="Confirm new password" class="modal-input">
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-modal-action="cancel">Cancel</button>
+        <button class="btn btn-primary" data-modal-action="confirm">Change Password</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="confirmModal" data-modal="confirm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="confirmTitle">Confirm Action</h3>
+        <button class="modal-close" data-close-modal>&times;</button>
+      </div>
+      <div class="modal-body">
+        <p id="confirmMessage">Are you sure?</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-modal-action="cancel">Cancel</button>
+        <button class="btn btn-danger" data-modal-action="confirm">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="deleteAccountModal" data-modal="deleteAccount">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Delete Account</h3>
+        <button class="modal-close" data-close-modal>&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="color: #d75d6a; font-weight: 600; margin-bottom: 15px;">This action cannot be undone!</p>
+        <p>Please type your email address to confirm account deletion:</p>
+        <input type="email" id="confirmEmailInput" placeholder="Type your email" class="modal-input">
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-modal-action="cancel">Cancel</button>
+        <button class="btn btn-danger" data-modal-action="confirm">Delete Account</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/settings.js"></script>
+  <script>
+    window.SmartHealth.initializeSettingsPage();
+  </script>
+</body>
+</html>

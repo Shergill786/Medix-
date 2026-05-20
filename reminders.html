@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medicine Reminders | Medix</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="reminders">
+  <div class="app-shell">
+    <aside class="sidebar" data-sidebar></aside>
+    <div class="app-main">
+      <div class="app-main-inner">
+        <header class="topbar" data-topbar></header>
+
+        <main class="stack">
+          <section class="intro-strip">
+            <article class="soft-panel">
+              <h3>Daily medicine support</h3>
+              <p class="helper">Keep important medicines visible so doses are not missed during busy routines or stressful days.</p>
+            </article>
+            <article class="soft-panel">
+              <h3>Useful for families too</h3>
+              <p class="helper">Track reminders on behalf of parents, children, or anyone who needs a little extra support staying on schedule.</p>
+            </article>
+            <article class="soft-panel">
+              <h3>Simple and consistent</h3>
+              <p class="helper">Store reminders locally for quick access every time you open the app without extra setup.</p>
+            </article>
+          </section>
+
+          <section class="content-grid">
+            <article class="form-card">
+              <div class="section-head">
+                <div>
+                  <h2>Add Reminder</h2>
+                  <p class="muted">Set timing, dosage, and helpful notes for regular medicines</p>
+                </div>
+              </div>
+              <form id="reminderForm" class="stack">
+                <div class="field">
+                  <label for="medicine">Medicine</label>
+                  <input id="medicine" name="medicine" class="input" required />
+                </div>
+                <div class="field">
+                  <label for="dosage">Dosage</label>
+                  <input id="dosage" name="dosage" class="input" required />
+                </div>
+                <div class="field">
+                  <label for="time">Time</label>
+                  <input id="time" name="time" class="input" type="time" required />
+                </div>
+                <div class="field">
+                  <label for="notes">Notes</label>
+                  <textarea id="notes" name="notes" class="textarea"></textarea>
+                </div>
+                <div class="switch-row">
+                  <label><input type="checkbox" name="smsReminder" checked /> SMS reminder</label>
+                  <label><input type="checkbox" name="emailReminder" checked /> Email reminder</label>
+                </div>
+                <button class="btn btn-primary" type="submit">Add Reminder</button>
+              </form>
+            </article>
+
+            <article class="panel">
+              <div class="section-head">
+                <div>
+                  <h2>Saved Reminders</h2>
+                  <p class="muted">Edit by deleting and re-adding with updated information</p>
+                </div>
+              </div>
+              <div id="remindersList" class="list"></div>
+            </article>
+          </section>
+
+          <section class="subgrid-two">
+            <article class="panel">
+              <div class="section-head">
+                <div>
+                  <h2>Adherence Tips</h2>
+                  <p class="muted">A few simple habits improve consistency</p>
+                </div>
+              </div>
+              <div class="list">
+                <article class="card">
+                  <h3>Link medicines to routines</h3>
+                  <p class="helper" style="margin-top:10px;">Tie reminders to breakfast, lunch, bedtime, or another everyday event that rarely changes.</p>
+                </article>
+                <article class="card">
+                  <h3>Keep notes practical</h3>
+                  <p class="helper" style="margin-top:10px;">Use reminder notes like "after food", "with water", or "avoid skipping" so the alert stays meaningful.</p>
+                </article>
+              </div>
+            </article>
+
+            <article class="panel">
+              <div class="section-head">
+                <div>
+                  <h2>When to Update</h2>
+                  <p class="muted">Refresh reminders any time treatment changes</p>
+                </div>
+              </div>
+              <div class="list">
+                <article class="card">
+                  <h3>After a new prescription</h3>
+                  <p class="helper" style="margin-top:10px;">Add or remove reminders when a doctor changes dosage, timing, or duration.</p>
+                </article>
+                <article class="card">
+                  <h3>After side effects or confusion</h3>
+                  <p class="helper" style="margin-top:10px;">If instructions are unclear, re-check the plan with your doctor or pharmacist before continuing.</p>
+                </article>
+              </div>
+            </article>
+          </section>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/reminders.js"></script>
+  <script>
+    window.SmartHealth.initializeRemindersPage();
+  </script>
+</body>
+</html>

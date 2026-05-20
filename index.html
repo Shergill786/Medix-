@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medix Service Web Application</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body class="landing-page">
+  <div class="container">
+    <header class="landing-masthead">
+      <div class="luxury-brand-frame">
+        <span class="luxury-brand-line" aria-hidden="true"></span>
+        <a class="luxury-brand-wrap" href="index.html" aria-label="Medix home">
+          <span class="luxury-brand-mark">
+            <img src="assets/smart-health-mark.svg" alt="" class="luxury-brand-logo" />
+          </span>
+          <span class="luxury-brand-copy">
+            <small>Private Digital Care Experience</small>
+            <strong>Medix</strong>
+            <span>Care, Clearly Connected.</span>
+          </span>
+        </a>
+        <span class="luxury-brand-line" aria-hidden="true"></span>
+      </div>
+
+      <!-- <p class="lux4ury-brand-quote">A signature digital care experience for modern families.</p> -->
+    </header>
+
+    <section class="luxury-hero">
+      <div class="luxury-hero-copy">
+        <span class="eyebrow">Concierge-Inspired Care Platform</span>
+        <h1 class="display">A refined digital front door for trusted hospitals, specialist booking, and calm follow-up care.</h1>
+        <p class="lead">Medix is designed like a premium care companion: discover hospitals by city, compare specialists, book with clarity, track medicines, store records, and stay prepared for urgent moments without the usual friction of fragmented healthcare tools.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="login.html">Enter Patient Portal</a>
+          <a class="btn btn-ghost" href="#why-use">Explore the Experience</a>
+          <button class="btn btn-secondary landing-theme-toggle" type="button" onclick="window.SmartHealth.toggleTheme()">🌙 Toggle theme</button>
+        </div>
+
+        <div class="hero-trust-grid">
+          <article class="trust-tile">
+            <strong>🔍 Curated Discovery</strong>
+            <p class="helper">Search by city, compare hospitals, and move into specialists with a cleaner sense of direction.</p>
+          </article>
+          <article class="trust-tile">
+            <strong>✨ Elevated Follow-up</strong>
+            <p class="helper">Appointments, records, and reminders stay in one elegant care flow after booking.</p>
+          </article>
+          <article class="trust-tile">
+            <strong>⚡ Ready When Urgent</strong>
+            <p class="helper">Critical details and emergency pathways remain close when speed and clarity matter.</p>
+          </article>
+        </div>
+
+        <!-- <div class="hero-detail-list">
+          <article class="detail-note">
+            <span class="detail-kicker">Luxury Navigation</span>
+            <strong>From city to hospital to specialist</strong>
+            <p class="helper">Browse trusted care options in a structure that feels curated rather than crowded.</p>
+          </article>
+          <article class="detail-note">
+            <span class="detail-kicker">Patient Experience</span>
+            <strong>Designed for families as well as individuals</strong>
+            <p class="helper">Useful for routine care, specialist planning, medicine support, and urgent moments alike.</p>
+          </article>
+          <article class="detail-note">
+            <span class="detail-kicker">Continuity</span>
+            <strong>Everything stays beautifully connected</strong>
+            <p class="helper">Appointments, records, profile details, and reminders remain easy to revisit without losing context.</p>
+          </article>
+        </div>
+      </div> -->
+    </section>
+
+    <section class="section" id="why-use">
+      <div class="intro-strip">
+        <article class="soft-panel">
+          <h3>🌍 Search by city</h3>
+          <p class="helper">Start with location, then compare hospitals, specialties, and doctor availability in a clearer booking flow.</p>
+        </article>
+        <article class="soft-panel">
+          <h3>🎯 Stay on track</h3>
+          <p class="helper">Appointments, reminders, and records work together so care does not feel fragmented after the first visit.</p>
+        </article>
+        <article class="soft-panel">
+          <h3>⏱️ Be ready faster</h3>
+          <p class="helper">Emergency contacts and stored profile details help reduce friction when fast decisions are needed.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="care-journeys">
+      <div class="section-head">
+        <div>
+          <h2 style="margin-top:14px;">Built around the moments patients actually go through.</h2>
+        </div>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <h3>🏥 Find the right care faster</h3>
+          <p class="helper">Explore hospitals by city, compare care options, and review available specialists without jumping between disconnected pages.</p>
+        </article>
+        <article class="card">
+          <h3>📋 Stay organized between visits</h3>
+          <p class="helper">Appointments, medicine reminders, and health records are structured to help patients stay on top of follow-up care.</p>
+        </article>
+        <article class="card">
+          <h3>🚨 Feel more prepared in urgent moments</h3>
+          <p class="helper">Emergency access tools and stored profile details make it easier to act quickly when time and clarity matter.</p>
+        </article>
+      </div>
+    </section>
+   <section class="section" id="daily-quote">
+      <div class="section-head">
+        <div>
+          <h2 style="margin-top:14px;">A small dose of everyday health encouragement.</h2>
+        </div>
+      </div>
+      <div id="landingQuote" aria-live="polite" style="text-align: center; padding: 32px; background: linear-gradient(135deg, rgba(45, 212, 191, 0.05), rgba(15, 111, 121, 0.05)); border-radius: 18px; border: 1px solid rgba(45, 212, 191, 0.1);"></div>
+    </section>
+
+    <h2 class="footer-note">Medix - Empowering healthcare through smart technology..</h2>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/index.js"></script>
+  <script>
+    window.SmartHealth.initializeLandingPage();
+  </script>
+</body>
+</html>

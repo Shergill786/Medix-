@@ -1,0 +1,19 @@
+{
+  "name": "medix",
+  "version": "2.0.0",
+  "description": "Medix healthcare app with static frontend and API-safe Node backend.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "check": "node scripts/check-project.js"
+  },
+  "keywords": [
+    "healthcare",
+    "appointments",
+    "pharmacy",
+    "medix"
+  ],
+  "author": "",
+  "license": "MIT"
+}

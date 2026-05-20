@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health Records | Medix</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="records">
+  <div class="app-shell">
+    <aside class="sidebar" data-sidebar></aside>
+    <div class="app-main">
+      <div class="app-main-inner">
+        <header class="topbar" data-topbar></header>
+
+        
+          <section class="content-grid">
+            <article class="form-card">
+              <div class="section-head">
+                <div>
+                  <h2>Add Health Record</h2>
+                  <p class="muted">Store consultation notes, reports, and summaries</p>
+                </div>
+              </div>
+              <form id="recordForm" class="stack">
+                <div class="field"><label for="title">Record title</label><input id="title" name="title" class="input" required /></div>
+                <div class="field"><label for="type">Record type</label><input id="type" name="type" class="input" required /></div>
+                <div class="field"><label for="hospital">Hospital / Clinic</label><input id="hospital" name="hospital" class="input" required /></div>
+                <div class="field"><label for="date">Date</label><input id="date" name="date" type="date" class="input" required /></div>
+                <div class="field"><label for="doctor">Doctor</label><input id="doctor" name="doctor" class="input" placeholder="Doctor name for prescriptions" /></div>
+                <div class="field"><label for="medicines">Medicines / receipt items</label><textarea id="medicines" name="medicines" class="textarea" placeholder="Example: Metformin 500mg - after dinner; Vitamin D3 - morning"></textarea></div>
+                <div class="field"><label for="recordNotes">Notes</label><textarea id="recordNotes" name="notes" class="textarea"></textarea></div>
+                <button class="btn btn-primary" type="submit">Save Record</button>
+              </form>
+            </article>
+
+            <article class="panel">
+              <div class="section-head">
+                <div>
+                  <h2>Saved Records</h2>
+                  <p class="muted">Lightweight record timeline stored in the browser</p>
+                </div>
+              </div>
+              <div id="recordsList" class="list"></div>
+            </article>
+          </section>
+
+          <section class="panel">
+            <div class="section-head">
+              <div>
+                <h2>Prescription & Receipt Upload</h2>
+                <p class="muted">Upload an image/PDF or paste text. The server uses OpenAI Vision when configured, otherwise a local fallback.</p>
+              </div>
+            </div>
+            <form id="prescriptionUploadForm" class="upload-panel">
+              <div class="field">
+                <label for="prescriptionFile">Prescription or receipt file</label>
+                <input id="prescriptionFile" name="prescriptionFile" class="input" type="file" accept="image/*,.pdf" />
+              </div>
+              <div class="field">
+                <label for="prescriptionText">Optional text fallback</label>
+                <textarea id="prescriptionText" name="prescriptionText" class="textarea" placeholder="Paste medicine lines if the photo is hard to read"></textarea>
+              </div>
+              <button id="prescriptionUploadBtn" class="btn btn-primary" type="submit">Extract Prescription</button>
+              <p id="prescriptionUploadStatus" class="helper" aria-live="polite"></p>
+            </form>
+            <div id="prescriptionsList" class="list"></div>
+          </section>
+
+          <section class="subgrid-three">
+            <article class="panel">
+              <h2>Consultation notes</h2>
+              <p class="helper" style="margin-top:10px;">Save diagnosis summaries, follow-up instructions, or medicine changes discussed during visits.</p>
+            </article>
+            <article class="panel">
+              <h2>Lab and imaging</h2>
+              <p class="helper" style="margin-top:10px;">Use records for blood tests, scans, and report summaries that may be relevant in future appointments.</p>
+            </article>
+            <article class="panel">
+              <h2>Procedure history</h2>
+              <p class="helper" style="margin-top:10px;">Keep short notes on surgeries, procedures, or recovery advice so details stay easy to recall later.</p>
+            </article>
+          </section>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/records.js"></script>
+  <script>
+    window.SmartHealth.initializeRecordsPage();
+  </script>
+</body>
+</html>

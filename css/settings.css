@@ -1,0 +1,559 @@
+/* =========================================================
+   SETTINGS PAGE - LUXURY DARK THEME
+========================================================= */
+
+body {
+  background: #071018;
+  color: #ffffff;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.settings-container {
+  width: 100%;
+  padding: 28px;
+}
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.settings-hero {
+  position: relative;
+  width: 100%;
+  height: 280px;
+
+  border-radius: 36px;
+
+  overflow: hidden;
+
+  margin-bottom: 30px;
+
+  background:
+    linear-gradient(rgba(4,12,20,0.65),
+    rgba(4,12,20,0.7)),
+    url("../assets/settings-banner.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.settings-hero-content {
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+}
+
+.settings-hero-content h1 {
+  font-size: 72px;
+  line-height: 1;
+
+  margin-bottom: 16px;
+
+  font-weight: 500;
+
+  color: #ffffff;
+}
+
+.settings-hero-content p {
+  font-size: 20px;
+
+  color: rgba(255,255,255,0.75);
+}
+
+/* =========================================================
+   TABS
+========================================================= */
+
+.settings-tabs {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+
+  background: rgba(11, 23, 35, 0.88);
+
+  border-radius: 0 0 34px 34px;
+
+  overflow: hidden;
+
+  margin-top: -24px;
+  margin-bottom: 45px;
+
+  border: 1px solid rgba(255,255,255,0.06);
+
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 10px 35px rgba(0,0,0,0.35);
+}
+
+.settings-tab-btn {
+  border: none;
+  background: transparent;
+
+  padding: 26px 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  border-right: 1px solid rgba(255,255,255,0.05);
+}
+
+.settings-tab-btn:last-child {
+  border-right: none;
+}
+
+.settings-tab-btn:hover {
+  background: rgba(255,255,255,0.04);
+}
+
+.settings-tab-btn.active {
+  background: rgba(255,255,255,0.05);
+
+  box-shadow: inset 0 -4px 0 #4f8cff;
+}
+
+.tab-icon {
+  font-size: 32px;
+}
+
+.tab-label {
+  font-size: 16px;
+  font-weight: 600;
+
+  color: rgba(255,255,255,0.92);
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.settings-section {
+  display: none;
+}
+
+.settings-section.active {
+  display: block;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.section-header {
+  margin-bottom: 28px;
+}
+
+.section-header h2 {
+  font-size: 62px;
+  font-weight: 600;
+
+  margin-bottom: 10px;
+
+  color: #ffffff;
+}
+
+.section-header p {
+  font-size: 22px;
+
+  color: rgba(255,255,255,0.6);
+}
+
+/* =========================================================
+   PANEL
+========================================================= */
+
+.settings-panel {
+  background: rgba(10, 20, 30, 0.82);
+
+  border-radius: 34px;
+
+  padding: 28px;
+
+  border: 1px solid rgba(255,255,255,0.06);
+
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.35);
+}
+
+/* =========================================================
+   CATEGORY
+========================================================= */
+
+.category-title {
+  font-size: 28px;
+  font-weight: 700;
+
+  color: #ffffff;
+
+  margin-bottom: 22px;
+}
+
+.settings-category.danger .category-title {
+  color: #ff7070;
+}
+
+/* =========================================================
+   LIST
+========================================================= */
+
+.settings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* =========================================================
+   ITEMS
+========================================================= */
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 24px;
+
+  border-radius: 24px;
+
+  background: rgba(255,255,255,0.03);
+
+  border: 1px solid rgba(255,255,255,0.06);
+
+  transition: all 0.3s ease;
+}
+
+.setting-item:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(79,140,255,0.35);
+
+  background: rgba(255,255,255,0.05);
+}
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.setting-info strong {
+  display: block;
+
+  font-size: 22px;
+  font-weight: 600;
+
+  color: #ffffff;
+
+  margin-bottom: 6px;
+}
+
+.setting-info p {
+  font-size: 16px;
+
+  color: rgba(255,255,255,0.6);
+}
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.input,
+select,
+.modal-input {
+  background: rgba(255,255,255,0.04);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  color: white;
+
+  border-radius: 14px;
+
+  padding: 14px 16px;
+
+  outline: none;
+
+  transition: 0.3s ease;
+}
+
+.input:focus,
+select:focus,
+.modal-input:focus {
+  border-color: #4f8cff;
+
+  box-shadow:
+    0 0 0 4px rgba(79,140,255,0.12);
+}
+
+/* =========================================================
+   TOGGLE
+========================================================= */
+
+.toggle-switch {
+  position: relative;
+  width: 58px;
+  height: 30px;
+}
+
+.toggle-switch input {
+  display: none;
+}
+
+.toggle-slider {
+  position: absolute;
+  inset: 0;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.12);
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.toggle-slider::before {
+  content: "";
+
+  position: absolute;
+
+  width: 22px;
+  height: 22px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  top: 4px;
+  left: 4px;
+
+  transition: 0.3s ease;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+  background: #4f8cff;
+}
+
+.toggle-switch input:checked + .toggle-slider::before {
+  transform: translateX(28px);
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn {
+  border: none;
+
+  border-radius: 14px;
+
+  padding: 12px 24px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.btn-secondary {
+  background: rgba(255,255,255,0.08);
+
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.14);
+}
+
+.btn-primary {
+  background: #4f8cff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #3d78e8;
+}
+
+.btn-warning {
+  background: #d89d35;
+  color: white;
+}
+
+.btn-danger {
+  background: #d45f5f;
+  color: white;
+}
+
+/* =========================================================
+   MODALS
+========================================================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0,0,0,0.65);
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 9999;
+
+  backdrop-filter: blur(10px);
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 520px;
+
+  background: #0d1722;
+
+  border-radius: 32px;
+
+  padding: 30px;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.45);
+}
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 22px;
+}
+
+.modal-header h3 {
+  color: white;
+
+  font-size: 30px;
+}
+
+.modal-close {
+  width: 42px;
+  height: 42px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: rgba(255,255,255,0.06);
+
+  color: white;
+
+  font-size: 22px;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   MODAL BODY
+========================================================= */
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.modal-body label {
+  color: rgba(255,255,255,0.72);
+
+  font-weight: 600;
+}
+
+/* =========================================================
+   MODAL FOOTER
+========================================================= */
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  margin-top: 26px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+  .settings-tabs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .settings-container {
+    padding: 18px;
+  }
+
+  .settings-tabs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-header h2 {
+    font-size: 42px;
+  }
+
+  .setting-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .setting-item button,
+  .setting-item select {
+    width: 100%;
+  }
+
+  .settings-hero-content h1 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 540px) {
+
+  .settings-tabs {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-footer {
+    flex-direction: column;
+  }
+
+  .modal-footer button {
+    width: 100%;
+  }
+}

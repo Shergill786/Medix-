@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In | Medix</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body class="auth-page" data-page="login">
+  <div class="auth-visual">
+    <div class="auth-visual-content">
+      <div class="auth-logo">
+        <div class="auth-logo-icon">+</div>
+        <div class="auth-logo-text">Medix</div>
+      </div>
+
+      <h2 class="auth-tagline">
+        Care,<br />
+        <span>Clearly Connected</span>
+      </h2>
+
+      <div class="auth-features">
+        <div class="auth-feature">
+          <div class="auth-feature-icon">01</div>
+          <div>
+            <strong>Smart Discovery</strong>
+            <span>Find hospitals and specialists by location and availability</span>
+          </div>
+        </div>
+        <div class="auth-feature">
+          <div class="auth-feature-icon">02</div>
+          <div>
+            <strong>Unified Records</strong>
+            <span>Keep appointments, medicines, and health data in one place</span>
+          </div>
+        </div>
+        <div class="auth-feature">
+          <div class="auth-feature-icon">03</div>
+          <div>
+            <strong>Emergency Ready</strong>
+            <span>Access critical details instantly when you need them most</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="auth-panel">
+    <div class="auth-form-wrap">
+      <div class="auth-welcome">
+        <h2>Welcome Back</h2>
+        <p>Sign in to your patient account and manage your care</p>
+      </div>
+
+      <form id="loginForm" class="form-stack">
+        <div id="formAlert" class="alert" aria-live="polite"></div>
+        <div class="field">
+          <label for="email">Email Address</label>
+          <input id="email" type="email" class="input" placeholder="your.email@example.com" required value="aarav.mehta@example.com" />
+          <span id="emailError" class="error-text"></span>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" type="password" class="input" placeholder="Enter your password" required value="password123" />
+          <span id="passwordError" class="error-text"></span>
+        </div>
+
+        <div class="remember-row">
+          <label class="checkbox-label">
+            <input id="remember" type="checkbox" name="remember" />
+            Remember me
+          </label>
+          <a href="#forgot" class="forgot-link">Forgot password?</a>
+        </div>
+
+        <button id="submitBtn" type="submit" class="btn btn-primary auth-submit">Sign In</button>
+
+        <div class="auth-footer">
+          Don't have an account? <a href="signup.html">Create one</a>
+        </div>
+      </form>
+
+      <div class="auth-demo">
+        <p>Demo Credentials</p>
+        <p><strong>Email:</strong> aarav.mehta@example.com</p>
+        <p><strong>Password:</strong> password123</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

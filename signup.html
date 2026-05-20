@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account | Medix</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body class="auth-page" data-page="signup">
+  <div class="auth-visual">
+    <div class="auth-visual-content">
+      <div class="auth-logo">
+        <div class="auth-logo-icon">+</div>
+        <div class="auth-logo-text">Medix</div>
+      </div>
+
+      <h2 class="auth-tagline">
+        Start Your<br />
+        <span>Care Journey</span>
+      </h2>
+
+      <div class="auth-features">
+        <div class="auth-feature">
+          <div class="auth-feature-icon">01</div>
+          <div>
+            <strong>Private by design</strong>
+            <span>API keys and passwords stay on the server, never in page scripts</span>
+          </div>
+        </div>
+        <div class="auth-feature">
+          <div class="auth-feature-icon">02</div>
+          <div>
+            <strong>Follow-up ready</strong>
+            <span>Prescriptions, reminders, receipts, and visits stay connected</span>
+          </div>
+        </div>
+        <div class="auth-feature">
+          <div class="auth-feature-icon">03</div>
+          <div>
+            <strong>Always available</strong>
+            <span>Use local fallback flows when provider keys are not configured</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="auth-panel">
+    <div class="auth-form-wrap">
+      <div class="auth-welcome">
+        <h2>Create Your Account</h2>
+        <p>Join Medix and take control of your healthcare</p>
+      </div>
+
+      <form id="signupForm" class="form-stack">
+        <div id="formAlert" class="alert" aria-live="polite"></div>
+        <div class="field">
+          <label for="fullname">Full Name</label>
+          <input id="fullname" type="text" class="input" placeholder="Your full name" required />
+          <span id="fullnameError" class="error-text"></span>
+        </div>
+
+        <div class="field">
+          <label for="email">Email Address</label>
+          <input id="email" type="email" class="input" placeholder="your.email@example.com" required />
+          <span id="emailError" class="error-text"></span>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" type="password" class="input" placeholder="Create a strong password" required />
+          <span id="passwordError" class="error-text"></span>
+        </div>
+
+        <div class="field">
+          <label for="confirmPassword">Confirm Password</label>
+          <input id="confirmPassword" type="password" class="input" placeholder="Confirm your password" required />
+          <span id="confirmPasswordError" class="error-text"></span>
+        </div>
+
+        <label class="checkbox-label auth-terms">
+          <input id="terms" type="checkbox" name="terms" required />
+          I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+        </label>
+
+        <button id="submitBtn" type="submit" class="btn btn-primary auth-submit">Create Account</button>
+
+        <div class="auth-footer">
+          Already have an account? <a href="login.html">Sign in</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/signup.js"></script>
+</body>
+</html>

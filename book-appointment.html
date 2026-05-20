@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Appointment | Medix</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="appointments">
+  <div class="app-shell">
+    <aside class="sidebar" data-sidebar></aside>
+    <div class="app-main">
+      <div class="app-main-inner">
+        <header class="topbar" data-topbar></header>
+        <main class="stack">
+          <section class="finder-hero">
+            <div>
+              <span class="eyebrow">Booking Updated</span>
+              <h2>The appointment flow now lives inside Hospital Finder.</h2>
+              <p class="helper">Choose a city, select a hospital, pick a doctor, and confirm the slot with SMS/email reminders from one guided modal.</p>
+            </div>
+            <div class="map-preview">
+              <strong>Ready to book?</strong>
+              <a class="btn btn-primary" href="hospitals.html">Open Hospital Finder</a>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    window.SmartHealth.initializeAppShell({
+      pageId: 'appointments',
+      title: 'Book Appointment',
+      description: 'Use the updated finder-based booking flow.',
+    });
+  </script>
+</body>
+</html>
