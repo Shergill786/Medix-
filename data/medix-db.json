@@ -107,6 +107,13 @@
   ],
   "messages": [
     {
+      "id": "msg-f94f090174",
+      "message": "Find hospitals",
+      "reply": "Open Hospital Finder, choose a city, compare specialists, and book the slot that fits your care need.",
+      "provider": "local",
+      "createdAt": "2026-05-20T15:48:44.854Z"
+    },
+    {
       "id": "msg-f9985405b7",
       "message": "Find hospitals",
       "reply": "Open Hospital Finder, choose a city, compare specialists, and book the slot that fits your care need.",
