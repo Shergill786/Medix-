@@ -107,6 +107,20 @@
   ],
   "messages": [
     {
+      "id": "msg-31bdff78da",
+      "message": "Find hospitals",
+      "reply": "To find hospitals using our healthcare web app, follow these steps:\n\n1. **Log in** to your account or create a new one if you haven't already.\n2. Click on the **\"Search\"** or **\"Find a Provider\"** tab, usually located at the top of the page.\n3. Enter your **location** (city, state, or zip code) in the search bar.\n4. Select **\"Hospitals\"** from the drop-down menu or filter options.\n5. You can also **filter** your search results by distance, hospital type (e.g., general, specialty, or pediatric), and other criteria.\n6. Browse through the **list of hospitals** that match your search criteria.\n7. Click on a hospital's **profile** to",
+      "provider": "groq",
+      "createdAt": "2026-05-21T17:03:39.958Z"
+    },
+    {
+      "id": "msg-1145004a81",
+      "message": "Find hospitals",
+      "reply": "Open Hospital Finder, choose a city, compare specialists, and book the slot that fits your care need. API note: OpenAI chat failed (401)",
+      "provider": "local-fallback",
+      "createdAt": "2026-05-21T17:02:35.361Z"
+    },
+    {
       "id": "msg-f94f090174",
       "message": "Find hospitals",
       "reply": "Open Hospital Finder, choose a city, compare specialists, and book the slot that fits your care need.",

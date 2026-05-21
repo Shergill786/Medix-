@@ -1,6 +1,6 @@
 (function () {
   const SH = window.SmartHealth = window.SmartHealth || {};
-  const API_BASE = window.MEDIX_API_BASE || '/api';
+  const API_BASE = window.MEDIX_API_BASE || resolveApiBase();
 
   const NAV_ITEMS = [
     { id: 'home', label: 'Home', href: 'index.html' },
@@ -118,6 +118,14 @@
   SH.createEmptyState = function createEmptyState(message) {
     return `<div class="empty-state"><p>${message}</p></div>`;
   };
+
+  function resolveApiBase() {
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      return window.location.port === '3000' ? '/api' : 'http://localhost:3000/api';
+    }
+
+    return '/api';
+  }
 
   SH.applyTheme = applyTheme;
   SH.renderChatbot = renderChatbot;

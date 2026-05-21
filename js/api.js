@@ -1,6 +1,6 @@
 (function () {
   const SH = window.SmartHealth = window.SmartHealth || {};
-  const API_BASE = window.MEDIX_API_BASE || '/api';
+  const API_BASE = window.MEDIX_API_BASE || resolveApiBase();
 
   const FALLBACK_QUOTES = [
     { content: 'Small daily habits build long-term health resilience.', author: 'Medix' },
@@ -20,6 +20,14 @@
       author: data.author || 'Medix',
     };
   };
+
+  function resolveApiBase() {
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      return window.location.port === '3000' ? '/api' : 'http://localhost:3000/api';
+    }
+
+    return '/api';
+  }
 
   SH.apiFetch = async function apiFetch(path, options) {
     const token = localStorage.getItem('medix_auth_token');
